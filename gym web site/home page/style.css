@@ -1,0 +1,144 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: cornflowerblue;
+}
+p{
+    font-size: 20px;
+}
+header .logo h1 {
+    margin: 0;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+aside.note {
+    flex: 1;
+    padding: 20px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+
+aside.note p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+section.content {
+    flex: 2;
+    padding: 20px;
+}
+
+section.content img {
+    width: 99%;
+    height: 290px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+section.content h2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+footer {
+    padding: 20px;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+footer .auth a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .auth a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside.note, section.content {
+        padding: 10px;
+    }
+}
+/* Add this to your style.css file */
+
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav .dropbtn {
+    background-color: darkblue;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: darkblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav .dropdown-content a:hover {
+    background-color: none;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav .dropdown:hover .dropbtn {
+    background-color: none;
+}
+

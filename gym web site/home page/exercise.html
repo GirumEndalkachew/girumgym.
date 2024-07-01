@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+        }
+        header {
+            background-color: lightblue;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            margin: 20px;
+        }
+        .category {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .category h2 {
+            margin-top: 0;
+        }
+        .exercises {
+            display: none;
+            list-style: none;
+            padding: 0;
+        }
+        .exercises li {
+            background-color: #eee;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function toggleExercises(categoryId) {
+            var exercises = document.getElementById(categoryId);
+            if (exercises.style.display === "none") {
+                exercises.style.display = "block";
+            } else {
+                exercises.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Gym</h1>
+        <nav>
+            <ul>
+                <li><a href="#yoga">Yoga</a></li>
+                <li><a href="#cardio">Cardio</a></li>
+                <li><a href="#strength">Strength</a></li>
+                <li><a href="#swimming">Swimming</a></li>
+                <li><a href="#boxing">Boxing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="category" id="yoga">
+            <h2>Yoga</h2>
+            <button onclick="toggleExercises('yoga-exercises')">Show/Hide Exercises</button>
+            <ul class="exercises" id="yoga-exercises">
+                <li>Downward Dog</li>
+                <li>Tree Pose</li>
+                <li>Child's Pose</li>
+            </ul>
+        </div>
+        <div class="category" id="cardio">
+            <h2>Cardio</h2>
+            <button onclick="toggleExercises('cardio-exercises')">Show/Hide Exercises</button>
+            <ul class="exercises" id="cardio-exercises">
+                <li>Running</li>
+                <li>Jumping Jacks</li>
+                <li>Burpees</li>
+            </ul>
+        </div>
+        <div class="category" id="strength">
+            <h2>Strength</h2>
+            <button onclick="toggleExercises('strength-exercises')">Show/Hide Exercises</button>
+            <ul class="exercises" id="strength-exercises">
+                <li>Push Ups</li>
+                <li>Squats</li>
+                <li>Deadlifts</li>
+            </ul>
+        </div>
+        <div class="category" id="swimming">
+            <h2>Swimming</h2>
+            <button onclick="toggleExercises('swimming-exercises')">Show/Hide Exercises</button>
+            <ul class="exercises" id="swimming-exercises">
+                <li>Freestyle</li>
+                <li>Breaststroke</li>
+                <li>Butterfly</li>
+            </ul>
+        </div>
+        <div class="category" id="boxing">
+            <h2>Boxing</h2>
+            <button onclick="toggleExercises('boxing-exercises')">Show/Hide Exercises</button>
+            <ul class="exercises" id="boxing-exercises">
+                <li>Jab</li>
+                <li>Cross</li>
+                <li>Uppercut</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
